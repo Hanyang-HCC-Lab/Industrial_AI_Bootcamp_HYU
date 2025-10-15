@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Hanyang-HCC-Lab/Industrial_AI_Bootcamp_HYU
   branch: main
+  base_url: https://5ugzrpufnl.execute-api.ap-northeast-2.amazonaws.com
+  auth_endpoint: /auth
 
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
