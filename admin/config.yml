@@ -2,14 +2,12 @@ backend:
   name: github
   repo: Hanyang-HCC-Lab/Industrial_AI_Bootcamp_HYU
   branch: main
+  base_url: https://5ugzrpufnl.execute-api.ap-northeast-2.amazonaws.com/
+  auth_endpoint: /auth
 
-# 로컬 개발 시 사용 (프로덕션에서는 주석 처리)
-# local_backend: true
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
 
-media_folder: "assets/images/uploads"  # 업로드된 이미지가 저장될 폴더
-public_folder: "/assets/images/uploads"  # 퍼블릭 URL 경로
-
-# 한국어 설정
 locale: 'ko'
 
 collections:
