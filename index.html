@@ -6,6 +6,8 @@
     <title>산업AI 인재양성 부트캠프 사업단
 </title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Netlify Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -58,5 +60,18 @@
     <script src="script.js"></script>
     <script src="js/data-loader.js"></script>
     <script src="js/index-notices.js"></script>
+
+    <!-- Netlify Identity 리다이렉트 처리 -->
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
 </body>
 </html>
