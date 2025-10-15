@@ -3,7 +3,5 @@
   "version": "1.0.0",
   "description": "OAuth server for Decap CMS on AWS Lambda",
   "main": "oauth.js",
-  "dependencies": {
-    "node-fetch": "^2.7.0"
-  }
+  "dependencies": {}
 }
