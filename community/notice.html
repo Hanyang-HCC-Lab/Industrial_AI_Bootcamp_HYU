@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항 - 산업AI 인재양성 부트캠프 사업단</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <main class="page-content">
+        <div class="page-header">
+            <div class="container">
+                <h1 class="page-title">공지사항</h1>
+                <p class="page-breadcrumb">
+                    <a href="../index.html">홈</a> &gt; <a href="notice.html">커뮤니티</a> &gt; <span>공지사항</span>
+                </p>
+            </div>
+        </div>
+        <section class="content-section">
+            <div class="container">
+                <div class="content-box">
+                    <h2>전체 공지사항</h2>
+                    <div class="notice-table">
+                        <div class="notice-row notice-header-row">
+                            <div class="notice-num">번호</div>
+                            <div class="notice-subject">제목</div>
+                            <div class="notice-author">작성자</div>
+                            <div class="notice-date-col">등록일</div>
+                        </div>
+                        <!-- 공지사항 목록이 JavaScript로 동적으로 로드됩니다 -->
+                        <div id="notice-list">
+                            <div class="notice-row">
+                                <div class="notice-num" colspan="5" style="text-align: center; padding: 40px;">
+                                    공지사항을 불러오는 중입니다...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination" id="pagination">
+                        <!-- 페이지네이션이 JavaScript로 동적으로 로드됩니다 -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="../components.js"></script>
+    <script src="../script.js"></script>
+    <script src="../js/data-loader.js"></script>
+    <script src="../js/notice-list.js"></script>
+</body>
+</html>

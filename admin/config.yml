@@ -1,0 +1,53 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/YOUR_REPO_NAME  # 실제 GitHub 저장소로 변경 필요
+  branch: main  # 또는 master
+
+# 로컬 개발 시 사용 (프로덕션에서는 주석 처리)
+# local_backend: true
+
+media_folder: "assets/images/uploads"  # 업로드된 이미지가 저장될 폴더
+public_folder: "/assets/images/uploads"  # 퍼블릭 URL 경로
+
+# 한국어 설정
+locale: 'ko'
+
+collections:
+  # 뉴스/보도자료 컬렉션
+  - name: "news"
+    label: "뉴스/보도자료"
+    label_singular: "뉴스"
+    folder: "data/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "json"
+    format: "json"
+    editor:
+      preview: false
+    fields:
+      - {label: "ID", name: "id", widget: "number", value_type: "int", required: true}
+      - {label: "제목", name: "title", widget: "string", required: true}
+      - {label: "작성자", name: "author", widget: "string", required: true, default: "뉴스H"}
+      - {label: "날짜", name: "date", widget: "string", required: true, pattern: ['^\d{4}\.\d{2}\.\d{2}$', '날짜 형식은 YYYY.MM.DD 이어야 합니다'], hint: "형식: 2025.10.15"}
+      - {label: "썸네일 이미지 URL", name: "thumbnail", widget: "string", required: true}
+      - {label: "요약", name: "summary", widget: "text", required: true}
+      - {label: "링크 URL", name: "link", widget: "string", required: true}
+
+  # 공지사항 컬렉션
+  - name: "notices"
+    label: "공지사항"
+    label_singular: "공지"
+    folder: "data/notices"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "json"
+    format: "json"
+    editor:
+      preview: false
+    fields:
+      - {label: "ID", name: "id", widget: "number", value_type: "int", required: true}
+      - {label: "제목", name: "title", widget: "string", required: true}
+      - {label: "작성자", name: "author", widget: "string", required: true, default: "관리자"}
+      - {label: "날짜", name: "date", widget: "string", required: true, pattern: ['^\d{4}\.\d{2}\.\d{2}$', '날짜 형식은 YYYY.MM.DD 이어야 합니다'], hint: "형식: 2025.10.15"}
+      - {label: "새 글 여부", name: "isNew", widget: "boolean", required: true, default: false}
+      - {label: "내용", name: "content", widget: "markdown", required: true, hint: "HTML 형식으로 작성됩니다"}

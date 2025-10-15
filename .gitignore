@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Node modules (if using npm/yarn in future)
+node_modules/
+
+# Environment variables
+.env
+.env.local
