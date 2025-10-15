@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Hanyang-HCC-Lab/Industrial_AI_Bootcamp_HYU
   branch: main
 
 # 로컬 개발 시 사용 (프로덕션에서는 주석 처리)

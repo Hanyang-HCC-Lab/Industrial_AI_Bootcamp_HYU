@@ -1,3 +1,8 @@
 [build]
   command = "node build-data.js"
   publish = "."
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF . ':(exclude)README.md' ':(exclude).github/'"
+
+# 데이터 파일이 변경될 때만 빌드
+[[plugins]]
+package = "@netlify/plugin-nextjs"
