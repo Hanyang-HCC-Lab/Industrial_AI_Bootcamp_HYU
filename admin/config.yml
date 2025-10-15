@@ -1,7 +1,6 @@
 backend:
-  name: github
-  repo: YOUR_GITHUB_USERNAME/YOUR_REPO_NAME  # 실제 GitHub 저장소로 변경 필요
-  branch: main  # 또는 master
+  name: git-gateway
+  branch: main
 
 # 로컬 개발 시 사용 (프로덕션에서는 주석 처리)
 # local_backend: true
