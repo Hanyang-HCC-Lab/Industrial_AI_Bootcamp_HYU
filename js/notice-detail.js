@@ -15,8 +15,8 @@ function loadNoticeDetail() {
         return;
     }
 
-    // noticesData는 notices-data.js에서 로드됨
-    if (typeof noticesData === 'undefined') {
+    // noticesData는 data-loader.js에서 로드됨
+    if (!noticesData || noticesData.length === 0) {
         displayError('공지사항 데이터를 불러올 수 없습니다.');
         return;
     }
@@ -63,5 +63,5 @@ function updateViewCount(noticeId) {
     console.log(`공지사항 ID ${noticeId}의 조회수가 증가했습니다.`);
 }
 
-// 페이지 로드 시 실행
-document.addEventListener('DOMContentLoaded', loadNoticeDetail);
+// 데이터 로드 완료 후 실행
+window.addEventListener('dataLoaded', loadNoticeDetail);
